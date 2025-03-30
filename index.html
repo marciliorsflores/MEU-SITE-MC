@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Serigrafia - Futuro dos Impressos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="w-full min-h-screen bg-dark">
+        <!-- Header -->
+        <header class="w-full bg-gradient text-white py-3 px-6 flex justify-between items-center text-sm">
+            <div class="flex space-x-8">
+                <a href="#inicio" class="hover:glow cursor-pointer">INÍCIO</a>
+                <a href="#produtos" class="hover:glow cursor-pointer">PRODUTOS</a>
+                <a href="#orcamento" class="hover:glow cursor-pointer">ORÇAMENTO</a>
+                <a href="#contato" class="hover:glow cursor-pointer">CONTATO</a>
+            </div>
+            <div>
+                <a href="https://wa.me/5551999713739" target="_blank" class="hover:glow">WHATSAPP: (51) 99971-3739</a>
+            </div>
+        </header>
+
+        <!-- Banner com Promoção Integrada -->
+        <section id="inicio" class="banner bg-gradient text-white p-8">
+            <div class="banner-content flex justify-between items-center flex-wrap">
+                <div class="banner-text">
+                    <h1 class="text-5xl font-orbitron">MC Serigrafia</h1>
+                    <p class="text-xl mt-2">Impressos do futuro, entregues hoje</p>
+                    <div class="flex items-center mt-3">
+                        <span class="mr-1 text-lg">ENTREGAS EM TODO O BRASIL</span>
+                        <span class="material-icons">local_shipping</span>
+                    </div>
+                    <div class="mt-6">
+                        <button id="orcamento-btn" class="btn-neon">SOLICITE UM ORÇAMENTO</button>
+                        <textarea id="orcamento-message" class="mt-4 w-full p-3 rounded bg-dark text-white border-neon" rows="3" placeholder="Descreva seu pedido..."></textarea>
+                    </div>
+                </div>
+                <div class="promo-container">
+                    <h3 class="text-lg font-orbitron">PROMOÇÃO: 10% OFF</h3>
+                    <div class="promo-content mt-2">
+                        <div class="promo-item">
+                            <img id="promo-image" src="" alt="Produto em Promoção" class="promo-img">
+                            <p id="promo-item" class="text-sm font-orbitron mt-2">Carregando...</p>
+                            <button id="promo-orcamento" class="btn-neon mt-2">SOLICITE ORÇAMENTO</button>
+                            <div id="countdown" class="text-xl mt-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="imagens/LOGO.png" alt="LOGOMARCA" class="banner-img hover:scale-105">
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section id="produtos" class="p-8">
+            <h2 class="text-3xl font-orbitron text-white text-center mb-6">Nossos Produtos</h2>
+            <div id="product-grid" class="grid grid-cols-3 gap-6">
+                <div class="product-card" id="sacola-plastica-20x30cm">
+                    <img src="imagens/SACOLAS.webp" alt="Sacola Plástica 20x30cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">SACOLA PLÁSTICA 20X30CM</h3>
+                    <p class="text-sm text-gray-300">R$ 0,66/un (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="SACOLA PLÁSTICA 20X30CM" data-price="0.66">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="sacola-plastica-30x40cm">
+                    <img src="imagens/SACOLAS.webp" alt="Sacola Plástica 30x40cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">SACOLA PLÁSTICA 30X40CM</h3>
+                    <p class="text-sm text-gray-300">R$ 0,77/un (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="SACOLA PLÁSTICA 30X40CM" data-price="0.77">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="sacola-plastica-40x50cm">
+                    <img src="imagens/SACOLAS.webp" alt="Sacola Plástica 40x50cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">SACOLA PLÁSTICA 40X50CM</h3>
+                    <p class="text-sm text-gray-300">R$ 0,88/un (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="SACOLA PLÁSTICA 40X50CM" data-price="0.88">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="cartao-visita-simples-9x5cm">
+                    <img src="imagens/CARTOES DE VISITAS SIMPLES.webp" alt="Cartão de Visita 9x5cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">CARTÃO DE VISITA SIMPLES 9X5CM</h3>
+                    <p class="text-sm text-gray-300">R$ 120,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="CARTÃO DE VISITA SIMPLES 9X5CM" data-price="120">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="cartao-visita-executivo-9x5cm">
+                    <img src="imagens/Servicos_TiposSiteImg171@mbmw350mh500mcwmch.webp" alt="Cartão de Visita Executivo 9x5cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">CARTÃO EXECUTIVO 9X5CM</h3>
+                    <p class="text-sm text-gray-300">R$ 250,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="CARTÃO DE VISITA EXECUTIVO VERNIZ LOCALIZADO 9X5CM" data-price="250">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="panfleto-couche-10x14cm">
+                    <img src="imagens/Panfletos Folder Folhetos 10x14 90g Impressão Frente e Verso.jpg" alt="Panfleto Couchê 10x14cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">PANFLETO COCHÊ 10X14CM</h3>
+                    <p class="text-sm text-gray-300">R$ 160,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="PANFLETO COCHÊ BRILHO 90GR - P - 10X14CM - 4X4 OU 4X0" data-price="160">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="banners-m2">
+                    <img src="imagens/Servicos_TiposSiteImg116@mbmw350mh500mcwmch.webp" alt="Banners m²" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">BANNERS m²</h3>
+                    <p class="text-sm text-gray-300">R$ 150,00 (1 m²)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="BANNERS m²" data-price="150">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="faixa-bixo-m2">
+                    <img src="imagens/Servicos_TiposSiteImg636@mbmw350mh500mcwmch.png" alt="Faixa Bixo m²" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">FAIXA BIXO m²</h3>
+                    <p class="text-sm text-gray-300">R$ 150,00 (1 m²)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="FAIXA BIXO m²" data-price="150">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="wind-banner-15x200cm">
+                    <img src="imagens/wind banner 75x200cm.jpg" alt="Wind Banner 15x200cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">WIND BANNER 15X200CM</h3>
+                    <p class="text-sm text-gray-300">R$ 260,00 (1un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="WIND BANNER BANDEIRA KIT - BASE + ANTENA + TECIDO 15X200CM" data-price="260">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="adesivos-impressao-digital-m2">
+                    <img src="imagens/9tl96a_b1k_-_3.webp" alt="Adesivos Impressão Digital m²" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">ADESIVOS DIGITAL m²</h3>
+                    <p class="text-sm text-gray-300">R$ 150,00 (1 m²)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="ADESIVOS IMPRESSÃO DIGITAL m²" data-price="150">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="adesivo-recortado-ploter-m2">
+                    <img src="imagens/RECORTE PLOTER.jpg" alt="Adesivo Recortado Ploter m²" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">ADESIVO PLOTER m²</h3>
+                    <p class="text-sm text-gray-300">R$ 160,00 (1 m²)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="ADESIVO RECORTADO PLOTER m²" data-price="160">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="adesivos-perfurado-m2">
+                    <img src="imagens/Servicos_TiposSiteImg121@mbmw350mh500mcwmch.png" alt="Adesivos Perfurado m²" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">ADESIVOS PERFURADO m²</h3>
+                    <p class="text-sm text-gray-300">R$ 150,00 (1 m²)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="ADESIVOS PERFURADO m²" data-price="150">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="bloco-pedido-15x20cm">
+                    <img src="imagens/download.jpg" alt="Bloco de Pedido 15x20cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">BLOCO PEDIDO 15X20CM</h3>
+                    <p class="text-sm text-gray-300">R$ 250,00 (10un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="BLOCO DE PEDIDO 15X20CM" data-price="250">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="bloco-receituario-15x20cm">
+                    <img src="imagens/bloco-de-pedido-comum-15x20cm-15x20cm-papel-53g-sem-revestimento-blocagem-50x2-vias-4x0-1-via-branca-2-via-amarela-12521569887112.png" alt="Bloco de Receituário 15x20cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">BLOCO RECEITUÁRIO 15X20CM</h3>
+                    <p class="text-sm text-gray-300">R$ 250,00 (10un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="BLOCO DE RECEITUÁRIO COPIATIVO 2 VIAS 15X20CM" data-price="250">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="comandas-10x20cm">
+                    <img src="imagens/COMANDAS 10X20CM.jpg" alt="Comandas 10x20cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">COMANDAS 10X20CM</h3>
+                    <p class="text-sm text-gray-300">R$ 150,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="COMANDAS 10X20CM" data-price="150">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="fundo-bandejas-jogo-americano">
+                    <img src="imagens/Jogo de Papel Personalisado.webp" alt="Fundo de Bandejas" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">FUNDO BANDEJAS</h3>
+                    <p class="text-sm text-gray-300">R$ 420,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="FUNDO DE BANDEJAS OU JOGO AMERICANO DE PAPEL SULFITE 56G (2X0)" data-price="420">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="tapete-papel-carro">
+                    <img src="imagens/tapete-para-carro-29-7x42cm-papel-offset-70g-4x0-colorido-1-lado20470888425fedeb4d30e06.png" alt="Tapete de Papel para Carro" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">TAPETE CARRO</h3>
+                    <p class="text-sm text-gray-300">R$ 420,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="TAPETE DE PAPEL PARA CARRO SULFITE 56G (2X0)" data-price="420">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="pasta-economica-46x31cm">
+                    <img src="imagens/Pasta Econômica com Bolsa - 46x31 cm - 4x0.jpg" alt="Pasta Econômica 46x31cm" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">PASTA ECONÔMICA 46X31CM</h3>
+                    <p class="text-sm text-gray-300">R$ 260,00 (100un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="PASTA ECONÔMICA COM BOLSA - 46X31 CM - 4X0" data-price="260">ADICIONAR</button>
+                </div>
+                <div class="product-card" id="papel-timbrado-a4">
+                    <img src="imagens/PAPEL TIMBRADO A4 PERSONALISADO.webp" alt="Papel Timbrado A4" class="product-img">
+                    <h3 class="text-white text-lg font-orbitron">PAPEL TIMBRADO A4</h3>
+                    <p class="text-sm text-gray-300">R$ 120,00 (1000un)</p>
+                    <button class="btn-neon mt-4 add-to-cart" data-product="PAPEL TIMBRADO A4 PERSONALISADO" data-price="120">ADICIONAR</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrinho de Orçamento -->
+        <aside id="cart" class="cart bg-dark p-6 text-white fixed right-0 top-20 w-80">
+            <h3 class="text-xl font-orbitron">Seu Orçamento</h3>
+            <ul id="cart-items" class="mt-4"></ul>
+            <p class="mt-4">Total: R$ <span id="cart-total">0,00</span></p>
+            <button id="send-cart" class="btn-neon mt-4 w-full">ENVIAR PARA WHATSAPP</button>
+        </aside>
+
+        <!-- Seção de Retirada com Mapa -->
+        <section id="retirada" class="p-8 text-center">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.147623409735!2d-51.17646368417947!3d-30.102858981861536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951976d7e4e8e5e5%3A0x2e6e8b9f1e8b9f1e!2sEstrada%20das%20Furnas%2C%20240%2C%20Vila%20Nova%2C%20Porto%20Alegre%20-%20RS%2C%2091700-000%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1630000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <button id="schedule-pickup" class="btn-neon mt-4">AGENDE A RETIRADA EM NOSSO BALCÃO FÍSICO</button>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contato" class="bg-gradient text-white p-6 text-center">
+            <p>MC Serigrafia | (51) 99971-3739 | contato@mcserigrafia.com.br</p>
+            <p><a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+das+Furnas,+240,+Vila+Nova,+Porto+Alegre,+RS,+Brasil" target="_blank" class="hover:glow">Estrada das Furnas, nº 240, Bairro Vila Nova, Porto Alegre, RS, Brasil</a></p>
+            <p class="text-sm mt-2">Retirada no balcão somente mediante agendamento prévio</p>
+            <p class="mt-2">© 2025 - Todos os direitos reservados</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
