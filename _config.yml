@@ -1,6 +1,6 @@
-title: Meu Site MC
-description: Site pessoal de Marcílio RS Flores
-baseurl: "/MEU-SITE-MC"  # Nome do repositório
+title: MC Serigrafia
+description: Impressos do futuro, entregues hoje
+baseurl: "/MEU-SITE-MC"  # Nome do seu repositório
 url: "https://marciliorsflores.github.io"
 collections:
   itens:
