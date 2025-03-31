@@ -1,8 +1,0 @@
-title: MC Serigrafia
-description: Impressos do futuro, entregues hoje
-baseurl: "/MEU-SITE-MC"
-url: "https://marciliorsflores.github.io"
-collections:
-  itens:
-    output: true
-safe: true
