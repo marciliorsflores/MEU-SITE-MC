@@ -1,8 +1,0 @@
-_config.yml
-title: Meu Site MC
-description: Site pessoal de Marcílio RS Flores
-baseurl: "/MEU-SITE-MC"  # Nome do repositório
-url: "https://marciliorsflores.github.io"
-collections:
-  itens:
-    output: true
