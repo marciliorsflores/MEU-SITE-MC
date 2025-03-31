@@ -1,254 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos personalizados */
 body {
     font-family: 'Orbitron', sans-serif;
-    background: #1a1a2e;
-    color: #fff;
-}
-
-.bg-dark {
-    background: #1a1a2e;
-}
-
-.bg-gradient {
-    background: linear-gradient(135deg, #0f3460, #e94560);
-}
-
-.font-orbitron {
-    font-family: 'Orbitron', sans-serif;
-}
-
-.text-5xl { font-size: 3rem; }
-.text-3xl { font-size: 1.875rem; }
-.text-xl { font-size: 1.25rem; }
-.text-lg { font-size: 1.125rem; }
-.text-sm { font-size: 0.875rem; }
-
-.w-full { width: 100%; }
-.min-h-screen { min-height: 100vh; }
-.flex { display: flex; }
-.justify-between { justify-content: space-between; }
-.items-center { align-items: center; }
-.text-center { text-align: center; }
-.p-8 { padding: 2rem; }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 0.75rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.ml-4 { margin-left: 1rem; }
-
-.space-x-8 > * + * { margin-left: 2rem; }
-
-header a {
-    color: #00ffcc; /* Cor neon mais visível */
-    text-decoration: none;
-}
-
-.hover\:glow:hover {
-    text-shadow: 0 0 10px #00ffcc;
-    transition: all 0.3s ease;
-}
-
-.btn-neon {
-    background: transparent;
-    border: 2px solid #00ffcc;
-    color: #00ffcc;
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-neon:hover {
-    background: #00ffcc;
-    color: #1a1a2e;
-    box-shadow: 0 0 15px #00ffcc;
-}
-
-.btn-remove {
-    background: transparent;
-    border: 2px solid #e94560;
-    color: #e94560;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-remove:hover {
-    background: #e94560;
-    color: #fff;
-    box-shadow: 0 0 10px #e94560;
-}
-
-.border-neon {
-    border: 2px solid #00ffcc;
-    background: #2a324e;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.border-neon:focus {
-    box-shadow: 0 0 10px #00ffcc;
-    outline: none;
-}
-
-textarea.border-neon::placeholder {
-    color: #b0b8d6;
-}
-
-.banner-img {
-    max-width: 300px;
-    transition: transform 0.3s ease;
-}
-
-.banner-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.banner-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.promo-container {
-    flex: 1;
-    text-align: center;
-    min-width: 250px;
-}
-
-.promo-img {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid #00ffcc;
-}
-
-.promo-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #00ffcc; /* Borda adicionada */
-    border-radius: 10px;
-    padding: 1rem;
-    background: #16213e; /* Fundo escuro para destacar */
-}
-
-.promo-item {
-    text-align: center;
-}
-
-.banner-image {
-    flex: 1;
-    text-align: center;
-    min-width: 300px;
-}
-
-.grid {
-    display: grid;
-}
-
-.grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.gap-6 {
-    gap: 1.5rem;
+    background-color: #1a202c;
 }
 
 .product-card {
-    background: #16213e;
+    background-color: #2d3748;
     padding: 1rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    transform: scale(1.05);
 }
 
 .product-img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.cart {
-    border-left: 2px solid #00ffcc;
-    height: 80vh;
-    overflow-y: auto;
+.btn-neon {
+    background: none;
+    border: 2px solid #00f7ff;
+    color: #00f7ff;
+    padding: 0.5rem 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
 }
 
-#cart-items li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #00ffcc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#retirada {
-    padding: 2rem;
-    margin-top: -3rem; /* Aumentei o valor negativo para subir mais o mapa */
-}
-
-.map-container {
-    max-width: 600px;
-    margin: 0 auto;
-    border: 2px solid #00ffcc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 300px;
-}
-
-@media (max-width: 768px) {
-    .grid-cols-3 {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .promo-container {
-        margin-top: 1rem;
-    }
-    .banner-image {
-        margin-top: 1rem;
-    }
-    .cart {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-bottom: 0.25rem; /* Espaço ainda menor em mobile */
-    }
-    #retirada {
-        margin-top: 0.25rem; /* Bem próximo em mobile, quase encostando */
-    }
-    .map-container iframe {
-        height: 200px;
-    }
+.btn-neon:hover {
+    background-color: #00f7ff;
+    color: #1a202c;
+    box-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff, 0 0 40px #00f7ff;
 }
